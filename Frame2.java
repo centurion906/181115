@@ -15,6 +15,7 @@ public class Frame2 extends JFrame{
     private JMenuItem jie = new JMenuItem("Exit");
     private JMenuItem jiOX = new JMenuItem("0Xgame");
     private JMenuItem jibarbar = new JMenuItem("barbar");
+    private JMenuItem jiHappy = new JMenuItem("HappySwimming");
     private JMenuItem jiKBC = new JMenuItem("KeyboardControl");
     private JMenuItem jiDecrypt = new JMenuItem("Decrypt");
     private JMenuItem jiFileDecrypt = new JMenuItem("File-Decrypt");
@@ -37,6 +38,7 @@ public class Frame2 extends JFrame{
         jmg.add(jiOX);
         jmg.add(jiKBC);
         jmg.add(jibarbar);
+        jmg.add(jiHappy);
         jmt.add(jiDecrypt);
         jmt.add(jiFileDecrypt);
         jmt.add(jiDigitalTimer);
@@ -77,6 +79,14 @@ public class Frame2 extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 barbar bar = new barbar(Frame2.this);
                 bar.setVisible(true);
+                Frame2.this.setVisible(false);
+            }
+        });
+        jiHappy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HappySwimming hsm = new HappySwimming(Frame2.this);
+                hsm.setVisible(true);
                 Frame2.this.setVisible(false);
             }
         });
